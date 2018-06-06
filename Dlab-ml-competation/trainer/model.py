@@ -56,34 +56,34 @@ CSV_COLUMNS = ['Record_ID',
                'Gross_PI_Premium',
                'DurationofPolicy',
                'CombinedTradeRiskLevel',
-               'Public_Liability_Limit_1000000',
-               'Public_Liability_Limit_1000000_1',
-               'Public_Liability_Limit_2000000',
-               'Public_Liability_Limit_5000000',
-               'Public_Liability_Limit_5000000_1',
-               'Public_Liability_Limit_1000000_2',
-               'Public_Liability_Limit_1000000_3',
-               'Employers_Liability_Limit_1000',
-               'Professional_Indemnity_Limit_5',
-               'Professional_Indemnity_Limit_5_1',
-               'Professional_Indemnity_Limit_1',
-               'Professional_Indemnity_Limit_1_1',
-               'Professional_Indemnity_Limit_2',
-               'Professional_Indemnity_Limit_2_1',
-               'Professional_Indemnity_Limit_5_2',
-               'Professional_Indemnity_Limit_5_3',
-               'Professional_Indemnity_Limit_1_2',
-               'Professional_Indemnity_Limit_1_3',
-               'Professional_Indemnity_Limit_2_2',
-               'Professional_Indemnity_Limit_2_3',
+               # 'Public_Liability_Limit_1000000',
+               # 'Public_Liability_Limit_1000000_1',
+               # 'Public_Liability_Limit_2000000',
+               # 'Public_Liability_Limit_5000000',
+               # 'Public_Liability_Limit_5000000_1',
+               # 'Public_Liability_Limit_1000000_2',
+               # 'Public_Liability_Limit_1000000_3',
+               # 'Employers_Liability_Limit_1000',
+               # 'Professional_Indemnity_Limit_5',
+               # 'Professional_Indemnity_Limit_5_1',
+               # 'Professional_Indemnity_Limit_1',
+               # 'Professional_Indemnity_Limit_1_1',
+               # 'Professional_Indemnity_Limit_2',
+               # 'Professional_Indemnity_Limit_2_1',
+               # 'Professional_Indemnity_Limit_5_2',
+               # 'Professional_Indemnity_Limit_5_3',
+               # 'Professional_Indemnity_Limit_1_2',
+               # 'Professional_Indemnity_Limit_1_3',
+               # 'Professional_Indemnity_Limit_2_2',
+               # 'Professional_Indemnity_Limit_2_3',
                'Tools_Sum_Insured_Ind',
                'Contract_Works_Sum_Insured_Ind',
                'Hired_in_Plan_Sum_Insured_Ind',
                'Own_Plant_Sum_Insured_Ind',
                'Location',
-               'Public_Liability_Limit_5000000_2',
-               'Public_Liability_Limit_5000000_3',
-               'Professional_Indemnity_Limit_g',
+               # 'Public_Liability_Limit_5000000_2',
+               # 'Public_Liability_Limit_5000000_3',
+               # 'Professional_Indemnity_Limit_g',
                'Risk_Postcode2',
                'TotalEmployees']
 
@@ -111,7 +111,7 @@ CSV_COLUMN_DEFAULTS = [
     [0],  # 'Manual EE',
     [0],  # 'Clerical EE',
     [0],  # 'Subcontractor EE',
-    [''],  # 'Match Type',
+    [0],  # 'Match Type',
     [''],  # 'Trade 1 Category',
     [''],  # 'Trade 2 Category',
     [0],  # 'Trade 1 Risk Level',
@@ -123,34 +123,34 @@ CSV_COLUMN_DEFAULTS = [
     [0],  # 'Gross PI Premium',
     [0],  # 'DurationofPolicy',
     [0],  # 'CombinedTradeRiskLevel',
-    [0],  # 'Public_Liability_Limit_1000000',
-    [0],  # 'Public_Liability_Limit_1000000.1',
-    [0],  # 'Public_Liability_Limit_2000000',
-    [0],  # 'Public_Liability_Limit_5000000',
-    [0],  # 'Public_Liability_Limit_5000000.1',
-    [0],  # 'Public_Liability_Limit_1000000.2',
-    [0],  # 'Public_Liability_Limit_1000000.3',
-    [0],  # 'Employers_Liability_Limit_1000',
-    [0],  # 'Professional_Indemnity_Limit_5',
-    [0],  # 'Professional_Indemnity_Limit_5.1',
-    [0],  # 'Professional_Indemnity_Limit_1',
-    [0],  # 'Professional_Indemnity_Limit_1.1',
-    [0],  # 'Professional_Indemnity_Limit_2',
-    [0],  # 'Professional_Indemnity_Limit_2.1',
-    [0],  # 'Professional_Indemnity_Limit_5.2',
-    [0],  # 'Professional_Indemnity_Limit_5.3',
-    [0],  # 'Professional_Indemnity_Limit_1.2',
-    [0],  # 'Professional_Indemnity_Limit_1.3',
-    [0],  # 'Professional_Indemnity_Limit_2.2',
-    [0], [],  # 'Professional_Indemnity_Limit_2.3',
+    # [0],  # 'Public_Liability_Limit_1000000',
+    # [0],  # 'Public_Liability_Limit_1000000.1',
+    # [0],  # 'Public_Liability_Limit_2000000',
+    # [0],  # 'Public_Liability_Limit_5000000',
+    # [0],  # 'Public_Liability_Limit_5000000.1',
+    # [0],  # 'Public_Liability_Limit_1000000.2',
+    # [0],  # 'Public_Liability_Limit_1000000.3',
+    # [0],  # 'Employers_Liability_Limit_1000',
+    # [0],  # 'Professional_Indemnity_Limit_5',
+    # [0],  # 'Professional_Indemnity_Limit_5.1',
+    # [0],  # 'Professional_Indemnity_Limit_1',
+    # [0],  # 'Professional_Indemnity_Limit_1.1',
+    # [0],  # 'Professional_Indemnity_Limit_2',
+    # [0],  # 'Professional_Indemnity_Limit_2.1',
+    # [0],  # 'Professional_Indemnity_Limit_5.2',
+    # [0],  # 'Professional_Indemnity_Limit_5.3',
+    # [0],  # 'Professional_Indemnity_Limit_1.2',
+    # [0],  # 'Professional_Indemnity_Limit_1.3',
+    # [0],  # 'Professional_Indemnity_Limit_2.2',
+    # [0], [],  # 'Professional_Indemnity_Limit_2.3',
     [0],  # 'Tools_Sum_Insured_Ind',
     [0],  # 'Contract_Works_Sum_Insured_Ind',
     [0],  # 'Hired_in_Plan_Sum_Insured_Ind',
     [0],  # 'Own_Plant_Sum_Insured_Ind',
     [''],  # 'Location',
-    [0],  # 'Public_Liability_Limit_5000000.2',
-    [0],  # 'Public_Liability_Limit_5000000.3',
-    [0],  # 'Professional_Indemnity_Limit_g',
+    # [0],  # 'Public_Liability_Limit_5000000.2',
+    # [0],  # 'Public_Liability_Limit_5000000.3',
+    # [0],  # 'Professional_Indemnity_Limit_g',
     [''],  # 'Risk_Postcode2',
     [0]  # 'TotalEmployees'
 ]
@@ -170,110 +170,45 @@ INPUT_COLUMNS = [
     tf.feature_column.categorical_column_with_vocabulary_list(
         'Product',
         ['TradeA', 'TradeB', 'TradeC', 'TradeD', 'TradeE']),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+
+
+    # categorical_column_with_identity
+    tf.feature_column.categorical_column_with_identity(
         'Underwriting_Year',
-        [2010, 2011, 2012, 2013, 2014]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=5),   # [2010, 2011, 2012, 2013, 2014]
+    tf.feature_column.categorical_column_with_identity(
         'Transaction_Type',
-        ['New business', 'Renewal']),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=2),   # ['New business', 'Renewal']
+    tf.feature_column.categorical_column_with_identity(
         'Public_Liability_Limit',
-        [1000000, 2000000, 5000000, 10000000]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=4),   # [1000000, 2000000, 5000000, 10000000]
+    tf.feature_column.categorical_column_with_identity(
         'Employers_Liability_Limit',
-        [0, 10000000]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=2),   # [0, 10000000]
+    tf.feature_column.categorical_column_with_identity(
         'Professional_Indemnity_Limit',
-        [0, 50000, 100000, 250000, 500000, 1000000, 2000000]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_1000000',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_1000000_1',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_2000000',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_5000000',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_5000000_1',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_1000000_2',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_1000000_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Employers_Liability_Limit_1000',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_5',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_5_1',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_1',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_1_1',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_2',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_2_1',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_5_2',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_5_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_1_2',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_1_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_2_2',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Professional_Indemnity_Limit_2_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=7),   # [0, 50000, 100000, 250000, 500000, 1000000, 2000000]
+    tf.feature_column.categorical_column_with_identity(
         'Tools_Sum_Insured_Ind',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=2),   # [0, 1]
+    tf.feature_column.categorical_column_with_identity(
         'Contract_Works_Sum_Insured_Ind_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=2),   # [0, 1]
+    tf.feature_column.categorical_column_with_identity(
         'Hired_in_Plan_Sum_Insured_Ind_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
+        num_buckets=2),   # [0, 1]
+    tf.feature_column.categorical_column_with_identity(
         'Own_Plant_Sum_Insured_Ind_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_5000000_2',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_5000000_3',
-        [0, 1]),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Public_Liability_Limit_g',
-        [0, 1]),
+        num_buckets=2),   # [0, 1]
+    tf.feature_column.categorical_column_with_identity(
+        'Match_Type',
+        num_buckets=8),
 
 
     # For columns with a large number of values, or unknown values
     # We can use a hash function to convert to categories.
     tf.feature_column.categorical_column_with_hash_bucket(
         'Trade_1_Category', hash_bucket_size=100, dtype=tf.string),
-    tf.feature_column.categorical_column_with_hash_bucket(
-        'Trade_2_Category', hash_bucket_size=100, dtype=tf.string),
     tf.feature_column.categorical_column_with_hash_bucket(
         'Location', hash_bucket_size=100, dtype=tf.string),
     tf.feature_column.categorical_column_with_hash_bucket(
@@ -293,7 +228,8 @@ INPUT_COLUMNS = [
     tf.feature_column.numeric_column('Commission_Amount'),
     tf.feature_column.numeric_column('Gross_PI_Premium'),
     tf.feature_column.numeric_column('DurationofPolicy'),
-    tf.feature_column.numeric_column('CombinedTradeRiskLevel')
+    tf.feature_column.numeric_column('CombinedTradeRiskLevel'),
+    tf.feature_column.numeric_column('TotalEmployees')
 ]
 
 UNUSED_COLUMNS = set(CSV_COLUMNS) - {col.name for col in INPUT_COLUMNS} - \
@@ -301,6 +237,7 @@ UNUSED_COLUMNS = set(CSV_COLUMNS) - {col.name for col in INPUT_COLUMNS} - \
 
 
 def build_estimator(config, embedding_size=8, hidden_units=None):
+
   """Build a wide and deep model for predicting income category.
 
   Wide and deep models use deep neural nets to learn high level abstractions
@@ -348,7 +285,7 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
    Subcontractor_EE,
    Match_Type,
    Trade_1_Category,
-   Trade_2_Category,
+   # Trade_2_Category,
    Trade_1_Risk_Level,
    Trade_2_Risk_Level,
    # Effective_Date2,
@@ -358,42 +295,42 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
    Gross_PI_Premium,
    DurationofPolicy,
    CombinedTradeRiskLevel,
-   Public_Liability_Limit_1000000,
-   Public_Liability_Limit_1000000_1,
-   Public_Liability_Limit_2000000,
-   Public_Liability_Limit_5000000,
-   Public_Liability_Limit_5000000_1,
-   Public_Liability_Limit_1000000_2,
-   Public_Liability_Limit_1000000_3,
-   Employers_Liability_Limit_1000,
-   Professional_Indemnity_Limit_5,
-   Professional_Indemnity_Limit_5_1,
-   Professional_Indemnity_Limit_1,
-   Professional_Indemnity_Limit_1_1,
-   Professional_Indemnity_Limit_2,
-   Professional_Indemnity_Limit_2_1,
-   Professional_Indemnity_Limit_5_2,
-   Professional_Indemnity_Limit_5_3,
-   Professional_Indemnity_Limit_1_2,
-   Professional_Indemnity_Limit_1_3,
-   Professional_Indemnity_Limit_2_2,
-   Professional_Indemnity_Limit_2_3,
+   # Public_Liability_Limit_1000000,
+   # Public_Liability_Limit_1000000_1,
+   # Public_Liability_Limit_2000000,
+   # Public_Liability_Limit_5000000,
+   # Public_Liability_Limit_5000000_1,
+   # Public_Liability_Limit_1000000_2,
+   # Public_Liability_Limit_1000000_3,
+   # Employers_Liability_Limit_1000,
+   # Professional_Indemnity_Limit_5,
+   # Professional_Indemnity_Limit_5_1,
+   # Professional_Indemnity_Limit_1,
+   # Professional_Indemnity_Limit_1_1,
+   # Professional_Indemnity_Limit_2,
+   # Professional_Indemnity_Limit_2_1,
+   # Professional_Indemnity_Limit_5_2,
+   # Professional_Indemnity_Limit_5_3,
+   # Professional_Indemnity_Limit_1_2,
+   # Professional_Indemnity_Limit_1_3,
+   # Professional_Indemnity_Limit_2_2,
+   # Professional_Indemnity_Limit_2_3,
    Tools_Sum_Insured_Ind,
    Contract_Works_Sum_Insured_Ind,
    Hired_in_Plan_Sum_Insured_Ind,
    Own_Plant_Sum_Insured_Ind,
    Location,
-   Public_Liability_Limit_5000000_2,
-   Public_Liability_Limit_5000000_3,
-   Professional_Indemnity_Limit_g,
+   # Public_Liability_Limit_5000000_2,
+   # Public_Liability_Limit_5000000_3,
+   # Professional_Indemnity_Limit_g,
    Risk_Postcode2,
    TotalEmployees) = INPUT_COLUMNS
   # Build an estimator.
 
   # Reused Transformations.
   # Continuous columns can be converted to categorical via bucketization
-  age_buckets = tf.feature_column.bucketized_column(
-      age, boundaries=[18, 25, 30, 35, 40, 45, 50, 55, 60, 65])
+  # age_buckets = tf.feature_column.bucketized_column(
+  #     age, boundaries=[18, 25, 30, 35, 40, 45, 50, 55, 60, 65])
 
   # Wide columns and deep columns.
   wide_columns = [
@@ -413,15 +350,15 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
       Manual_EE,
       Clerical_EE,
       Subcontractor_EE,
-      Match_Type,
       Trade_1_Category,
-      Trade_2_Category,
+      # Trade_2_Category,
       Trade_1_Risk_Level,
       Trade_2_Risk_Level,
       Commission_Amount,
       Gross_PI_Premium,
       DurationofPolicy,
       CombinedTradeRiskLevel,
+      TotalEmployees,
   ]
 
 
@@ -434,42 +371,18 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
       tf.feature_column.indicator_column(Public_Liability_Limit),
       tf.feature_column.indicator_column(Employers_Liability_Limit),
 
-      tf.feature_column.indicator_column(Public_Liability_Limit_1000000),
-      tf.feature_column.indicator_column(Public_Liability_Limit_1000000_1),
-      tf.feature_column.indicator_column(Public_Liability_Limit_2000000),
-      tf.feature_column.indicator_column(Public_Liability_Limit_5000000),
-      tf.feature_column.indicator_column(Public_Liability_Limit_5000000_1),
-      tf.feature_column.indicator_column(Public_Liability_Limit_1000000_2),
-      tf.feature_column.indicator_column(Public_Liability_Limit_1000000_3),
-      tf.feature_column.indicator_column(Employers_Liability_Limit_1000),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_5),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_5_1),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_1),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_1_1),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_2),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_2_1),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_5_2),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_5_3),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_1_2),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_1_3),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_2_2),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_2_3),
       tf.feature_column.indicator_column(Tools_Sum_Insured_Ind),
       tf.feature_column.indicator_column(Contract_Works_Sum_Insured_Ind),
       tf.feature_column.indicator_column(Hired_in_Plan_Sum_Insured_Ind),
       tf.feature_column.indicator_column(Own_Plant_Sum_Insured_Ind),
-      tf.feature_column.indicator_column(Public_Liability_Limit_5000000_2),
-      tf.feature_column.indicator_column(Public_Liability_Limit_5000000_3),
-      tf.feature_column.indicator_column(Professional_Indemnity_Limit_g),
-
-
 
       # Use embedding columns for high dimensional vocabularies
       tf.feature_column.embedding_column(
           Location, dimension=embedding_size),
       tf.feature_column.embedding_column(
           Risk_Postcode2, dimension=embedding_size),
-      TotalEmployees,
+      tf.feature_column.embedding_column(
+          Trade_1_Category, dimension=embedding_size),
   ]
 
 

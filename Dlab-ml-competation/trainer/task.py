@@ -4,8 +4,7 @@ import os
 import trainer.model as model
 
 import tensorflow as tf
-from tensorflow.contrib.learn.python.learn.utils import (
-    saved_model_export_utils)
+from tensorflow.contrib.learn.python.learn.utils import (saved_model_export_utils)
 from tensorflow.contrib.training.python.training import hparam
 
 
