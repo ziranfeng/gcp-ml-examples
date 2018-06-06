@@ -29,8 +29,6 @@ CSV_COLUMNS = ['Record_ID',
                'Source_System',
                'Product',
                'Underwriting_Year',
-               'Effective_Date',
-               'Expiry_Date',
                'Transaction_Type',
                'Public_Liability_Limit',
                'Employers_Liability_Limit',
@@ -39,20 +37,14 @@ CSV_COLUMNS = ['Record_ID',
                'Contract_Works_Sum_Insured',
                'Hired_in_Plan_Sum_Insured',
                'Own_Plant_Sum_Insured',
-               'Trade_1',
-               'Trade_2',
                'Manual_EE',
                'Clerical_EE',
                'Subcontractor_EE',
                'Match_Type',
                'Trade_1_Category',
-               'Trade_2_Category',
                'Trade_1_Risk Level',
                'Trade_2_Risk Level',
-               'Effective_Date2',
-               'CancellationEffectiveDate',
                'Commission_Amount',
-               'Policy_Count',
                'Gross_PI_Premium',
                'DurationofPolicy',
                'CombinedTradeRiskLevel',
@@ -70,43 +62,35 @@ CSV_COLUMN_DEFAULTS = [
     [0],  # 'Target1',
     [0],  # 'Target2',
     [0],  # 'Target3',
-    [''],  # 'Source System',
-    [''],  # 'Product',
-    [0],  # 'Underwriting Year',
-    [''],  # 'Effective Date',
-    [''],  # 'Expiry Date',
-    [''],  # 'Transaction Type',
-    [0],  # 'Public Liability Limit',
-    [0],  # 'Employers Liability Limit',
-    [0],  # 'Tools Sum Insured',
-    [0],  # 'Professional Indemnity Limit',
-    [0],  # 'Contract Works Sum Insured',
-    [0],  # 'Hired in Plan Sum Insured',
-    [0],  # 'Own Plant Sum Insured',
-    [''],  # 'Trade 1',
-    [''],  # 'Trade 2',
-    [0],  # 'Manual EE',
-    [0],  # 'Clerical EE',
-    [0],  # 'Subcontractor EE',
-    [0],  # 'Match Type',
-    [''],  # 'Trade 1 Category',
-    [''],  # 'Trade 2 Category',
-    [0],  # 'Trade 1 Risk Level',
-    [0],  # 'Trade 2 Risk Level',
-    [''],  # 'Effective_Date2',
-    [''],  # 'CancellationEffectiveDate',
-    [0],  # 'Commission Amount',
-    [0],  # 'Policy Count',
-    [0],  # 'Gross PI Premium',
-    [0],  # 'DurationofPolicy',
-    [0],  # 'CombinedTradeRiskLevel',
-    [0],  # 'Tools_Sum_Insured_Ind',
-    [0],  # 'Contract_Works_Sum_Insured_Ind',
-    [0],  # 'Hired_in_Plan_Sum_Insured_Ind',
-    [0],  # 'Own_Plant_Sum_Insured_Ind',
-    [''],  # 'Location',
-    [''],  # 'Risk_Postcode2',
-    [0]  # 'TotalEmployees'
+    [''],   # 'Source System',
+    [''],   # 'Product',
+    [0],    # 'Underwriting Year',
+    [''],   # 'Transaction Type',
+    [0],    # 'Public Liability Limit',
+    [0],    # 'Employers Liability Limit',
+    [0],    # 'Tools Sum Insured',
+    [0],    # 'Professional Indemnity Limit',
+    [0],    # 'Contract Works Sum Insured',
+    [0],    # 'Hired in Plan Sum Insured',
+    [0],    # 'Own Plant Sum Insured',
+    [0],    # 'Manual EE',
+    [0],    # 'Clerical EE',
+    [0],    # 'Subcontractor EE',
+    [''],   # 'Match Type',
+    [''],   # 'Trade 1 Category',
+    [0],    # 'Trade 1 Risk Level',
+    [0],    # 'Trade 2 Risk Level',
+    [0],    # 'Commission Amount',
+    [0],    # 'Gross PI Premium',
+    [0],    # 'DurationofPolicy',
+    [0],    # 'CombinedTradeRiskLevel',
+    [0],    # 'Tools_Sum_Insured_Ind',
+    [0],    # 'Contract_Works_Sum_Insured_Ind',
+    [0],    # 'Hired_in_Plan_Sum_Insured_Ind',
+    [0],    # 'Own_Plant_Sum_Insured_Ind',
+    [''],   # 'Location',
+    [''],   # 'Risk_Postcode2',
+    [0]     # 'TotalEmployees'
 ]
 
 # Target Column
@@ -123,7 +107,6 @@ INPUT_COLUMNS = [
     tf.feature_column.categorical_column_with_vocabulary_list(
         'Source_System', ['Custom', 'Simple']
     ),
-
     tf.feature_column.categorical_column_with_vocabulary_list(
         'Product',
         ['TradeA', 'TradeB', 'TradeC', 'TradeD', 'TradeE']
@@ -131,6 +114,10 @@ INPUT_COLUMNS = [
     tf.feature_column.categorical_column_with_vocabulary_list(
         'Transaction_Type',
         ['New business', 'Renewal']
+    ),
+    tf.feature_column.categorical_column_with_vocabulary_list(
+        'Match_Type',
+        ['0', '0.1', '1', '5', '10', 'Min Premium', 'Not Found', 'Trade Error']
     ),
 
 
@@ -151,17 +138,15 @@ INPUT_COLUMNS = [
         'Tools_Sum_Insured_Ind',
         num_buckets=2),   # [0, 1]
     tf.feature_column.categorical_column_with_identity(
-        'Contract_Works_Sum_Insured_Ind_3',
+        'Contract_Works_Sum_Insured_Ind',
         num_buckets=2),   # [0, 1]
     tf.feature_column.categorical_column_with_identity(
-        'Hired_in_Plan_Sum_Insured_Ind_3',
+        'Hired_in_Plan_Sum_Insured_Ind',
         num_buckets=2),   # [0, 1]
     tf.feature_column.categorical_column_with_identity(
-        'Own_Plant_Sum_Insured_Ind_3',
+        'Own_Plant_Sum_Insured_Ind',
         num_buckets=2),   # [0, 1]
-    tf.feature_column.categorical_column_with_identity(
-        'Match_Type',
-        num_buckets=8),
+
 
 
     # For columns with a large number of values, or unknown values
@@ -227,30 +212,26 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
   (Source_System,
    Product,
    Underwriting_Year,
-   # Effective_Date,
-   # Expiry_Date,
    Transaction_Type,
+   Tools_Sum_Insured,
+
    Public_Liability_Limit,
    Employers_Liability_Limit,
-   Tools_Sum_Insured,
    Professional_Indemnity_Limit,
+
    Contract_Works_Sum_Insured,
    Hired_in_Plan_Sum_Insured,
    Own_Plant_Sum_Insured,
-   # Trade_1,
-   # Trade_2,
+
    Manual_EE,
    Clerical_EE,
    Subcontractor_EE,
+
    Match_Type,
    Trade_1_Category,
-   # Trade_2_Category,
    Trade_1_Risk_Level,
    Trade_2_Risk_Level,
-   # Effective_Date2,
-   # CancellationEffectiveDate,
    Commission_Amount,
-   # Policy_Count,
    Gross_PI_Premium,
    DurationofPolicy,
    CombinedTradeRiskLevel,
@@ -279,16 +260,17 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
       # tf.feature_column.crossed_column(
       #     ['native_country', 'occupation'], hash_bucket_size=int(1e4)),
       Tools_Sum_Insured,
-      Professional_Indemnity_Limit,
       Contract_Works_Sum_Insured,
       Hired_in_Plan_Sum_Insured,
       Own_Plant_Sum_Insured,
+
       Manual_EE,
       Clerical_EE,
       Subcontractor_EE,
-      Trade_1_Category,
+
       Trade_1_Risk_Level,
       Trade_2_Risk_Level,
+
       Commission_Amount,
       Gross_PI_Premium,
       DurationofPolicy,
@@ -303,8 +285,11 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
       tf.feature_column.indicator_column(Product),
       tf.feature_column.indicator_column(Transaction_Type),
       tf.feature_column.indicator_column(Underwriting_Year),
+      tf.feature_column.indicator_column(Match_Type),
+
       tf.feature_column.indicator_column(Public_Liability_Limit),
       tf.feature_column.indicator_column(Employers_Liability_Limit),
+      tf.feature_column.indicator_column(Professional_Indemnity_Limit),
 
       tf.feature_column.indicator_column(Tools_Sum_Insured_Ind),
       tf.feature_column.indicator_column(Contract_Works_Sum_Insured_Ind),
