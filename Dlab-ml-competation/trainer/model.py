@@ -40,7 +40,7 @@ CSV_COLUMNS = ['Record_ID',
                'Manual_EE',
                'Clerical_EE',
                'Subcontractor_EE',
-               'Match_Type',
+               # 'Match_Type',
                'Trade_1_Category',
                'Trade_1_Risk_Level',
                'Trade_2_Risk_Level',
@@ -76,7 +76,7 @@ CSV_COLUMN_DEFAULTS = [
     [0],    # 'Manual EE',
     [0],    # 'Clerical EE',
     [0],    # 'Subcontractor EE',
-    [''],   # 'Match Type',
+    # [''],   # 'Match Type',
     [''],   # 'Trade 1 Category',
     [0],    # 'Trade 1 Risk Level',
     [0],    # 'Trade 2 Risk Level',
@@ -115,10 +115,10 @@ INPUT_COLUMNS = [
         'Transaction_Type',
         ['New business', 'Renewal']
     ),
-    tf.feature_column.categorical_column_with_vocabulary_list(
-        'Match_Type',
-        ['0', '0.1', '1', '5', '10', 'Min Premium', 'Not Found', 'Trade Error']
-    ),
+    # tf.feature_column.categorical_column_with_vocabulary_list(
+    #     'Match_Type',
+    #     ['0', '0.1', '1', '5', '10', 'Min Premium', 'Not Found', 'Trade Error']
+    # ),
 
 
     # categorical_column_with_identity
@@ -229,7 +229,7 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
    Clerical_EE,
    Subcontractor_EE,
 
-   Match_Type,
+   # Match_Type,
    Trade_1_Category,
    Trade_1_Risk_Level,
    Trade_2_Risk_Level,
@@ -286,7 +286,7 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
       tf.feature_column.indicator_column(Product),
       tf.feature_column.indicator_column(Transaction_Type),
       tf.feature_column.indicator_column(Underwriting_Year),
-      tf.feature_column.indicator_column(Match_Type),
+      # tf.feature_column.indicator_column(Match_Type),
 
       tf.feature_column.indicator_column(Public_Liability_Limit),
       tf.feature_column.indicator_column(Employers_Liability_Limit),
