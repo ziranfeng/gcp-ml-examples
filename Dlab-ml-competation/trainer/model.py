@@ -42,8 +42,8 @@ CSV_COLUMNS = ['Record_ID',
                'Subcontractor_EE',
                'Match_Type',
                'Trade_1_Category',
-               'Trade_1_Risk Level',
-               'Trade_2_Risk Level',
+               'Trade_1_Risk_Level',
+               'Trade_2_Risk_Level',
                'Commission_Amount',
                'Gross_PI_Premium',
                'DurationofPolicy',
@@ -125,6 +125,7 @@ INPUT_COLUMNS = [
     tf.feature_column.categorical_column_with_identity(
         'Underwriting_Year',
         num_buckets=5),   # [2010, 2011, 2012, 2013, 2014]
+
     tf.feature_column.categorical_column_with_identity(
         'Public_Liability_Limit',
         num_buckets=4),   # [1000000, 2000000, 5000000, 10000000]
@@ -134,6 +135,7 @@ INPUT_COLUMNS = [
     tf.feature_column.categorical_column_with_identity(
         'Professional_Indemnity_Limit',
         num_buckets=7),   # [0, 50000, 100000, 250000, 500000, 1000000, 2000000]
+
     tf.feature_column.categorical_column_with_identity(
         'Tools_Sum_Insured_Ind',
         num_buckets=2),   # [0, 1]
@@ -277,7 +279,6 @@ def build_estimator(config, embedding_size=8, hidden_units=None):
       CombinedTradeRiskLevel,
       TotalEmployees,
   ]
-
 
   deep_columns = [
       # Use indicator columns for low dimensional vocabularies
