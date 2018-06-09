@@ -14,7 +14,7 @@ VALID_FILES=gs://${BUCKET}/path/to/data_dlab/data_eval.csv
 MODEL_DIR=gs://${BUCKET}/path/to/models/${MODEL_NAME}
 
 CURRENT_DATE=`date + %Y%m%d_%H%M%S`
-JOB_NAME=train_${MODEL_NAME}_${TIER}_${CURRENT_DATE}
+JOB_NAME=train_${MODEL_NAME}_${TIER}_${CURRENT_DATE}_3
 
 #JOB_NAME=tune_${MODEL_NAME}_${CURRENT_DATE} # for hyper-parameter tuning jobs
 

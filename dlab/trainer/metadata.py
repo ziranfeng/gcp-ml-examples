@@ -31,8 +31,7 @@ HEADER = ['Record_ID', 'Target1', 'Target2', 'Target3',
           'Manual_EE', 'Clerical_EE', 'Subcontractor_EE',
           'Match_Type', 'Trade_1_Category', 'Trade_1_Risk_Level', 'Trade_2_Risk_Level',
           'Commission_Amount', 'Gross_PI_Premium', 'DurationofPolicy',
-          # 'Tools_Sum_Insured_Ind',
-          'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind', 'Own_Plant_Sum_Insured_Ind',
+          # 'Tools_Sum_Insured_Ind', 'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind', 'Own_Plant_Sum_Insured_Ind',
           'Location', 'Risk_Postcode2', 'TotalEmployees'
           ]
 
@@ -45,8 +44,7 @@ HEADER_DEFAULTS = [[0], [0], [0.0], [0.0],
                    [0], [0], [0],
                    ['0'], [''], [0], [0],
                    [0.0], [0.0], [0]
-                   # [0],
-                   [0], [0], [0],
+                   # [0], [0], [0], [0],
                    [''], [''], [0]
                    ]
 
@@ -70,9 +68,10 @@ INPUT_CATEGORICAL_FEATURE_NAMES_WITH_IDENTITY = {'Public_Liability_Limit': 4,
                                                  'Employers_Liability_Limit': 2,
                                                  'Professional_Indemnity_Limit': 7,
                                                  # 'Tools_Sum_Insured_Ind': 2,
-                                                 'Contract_Works_Sum_Insured_Ind': 2,
-                                                 'Hired_in_Plan_Sum_Insured_Ind': 2,
-                                                 'Own_Plant_Sum_Insured_Ind': 2}
+                                                 # 'Contract_Works_Sum_Insured_Ind': 2,
+                                                 # 'Hired_in_Plan_Sum_Insured_Ind': 2,
+                                                 # 'Own_Plant_Sum_Insured_Ind': 2
+                                                 }
 
 # Categorical features with identity constructed, if any, in process_features function in input.py module,
 # as part of reading data. Usually include constructed boolean flags.
@@ -123,9 +122,7 @@ SERVING_COLUMNS = ['Source_System', 'Product', 'Underwriting_Year', 'Transaction
                    'Manual_EE', 'Clerical_EE', 'Subcontractor_EE',
                    'Match_Type', 'Trade_1_Category', 'Trade_1_Risk_Level', 'Trade_2_Risk_Level',
                    'Commission_Amount', 'Gross_PI_Premium', 'DurationofPolicy',
-                   # 'Tools_Sum_Insured_Ind',
-                   'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind',
-                   'Own_Plant_Sum_Insured_Ind',
+                   # 'Tools_Sum_Insured_Ind', 'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind', 'Own_Plant_Sum_Insured_Ind',
                    'Location', 'Risk_Postcode2', 'TotalEmployees']
 
 # List of the default values of all the columns of the serving data.
@@ -136,6 +133,5 @@ SERVING_DEFAULTS = [[''], [''], [0], [''],
                     [0], [0], [0],
                     ['0'], [''], [0], [0],
                     [0.0], [0.0], [0]
-                    # [0],
-                    [0], [0], [0],
+                    # [0], [0], [0], [0],
                     [''], [''], [0]]
