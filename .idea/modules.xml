@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Dlab-ml-competation.iml" filepath="$PROJECT_DIR$/.idea/Dlab-ml-competation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gcp-ml-examples.iml" filepath="$PROJECT_DIR$/.idea/gcp-ml-examples.iml" />
     </modules>
   </component>
 </project>
