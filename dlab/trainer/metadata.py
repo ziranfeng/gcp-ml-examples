@@ -31,7 +31,8 @@ HEADER = ['Record_ID', 'Target1', 'Target2', 'Target3',
           'Manual_EE', 'Clerical_EE', 'Subcontractor_EE',
           'Match_Type', 'Trade_1_Category', 'Trade_1_Risk_Level', 'Trade_2_Risk_Level',
           'Commission_Amount', 'Gross_PI_Premium', 'DurationofPolicy',
-          'Tools_Sum_Insured_Ind', 'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind', 'Own_Plant_Sum_Insured_Ind',
+          # 'Tools_Sum_Insured_Ind',
+          'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind', 'Own_Plant_Sum_Insured_Ind',
           'Location', 'Risk_Postcode2', 'TotalEmployees'
           ]
 
@@ -44,7 +45,8 @@ HEADER_DEFAULTS = [[0], [0], [0.0], [0.0],
                    [0], [0], [0],
                    ['0'], [''], [0], [0],
                    [0.0], [0.0], [0]
-                   [0], [0], [0], [0],
+                   # [0],
+                   [0], [0], [0],
                    [''], [''], [0]
                    ]
 
@@ -67,7 +69,7 @@ CONSTRUCTED_NUMERIC_FEATURE_NAMES = []
 INPUT_CATEGORICAL_FEATURE_NAMES_WITH_IDENTITY = {'Public_Liability_Limit': 4,
                                                  'Employers_Liability_Limit': 2,
                                                  'Professional_Indemnity_Limit': 7,
-                                                 'Tools_Sum_Insured_Ind': 2,
+                                                 # 'Tools_Sum_Insured_Ind': 2,
                                                  'Contract_Works_Sum_Insured_Ind': 2,
                                                  'Hired_in_Plan_Sum_Insured_Ind': 2,
                                                  'Own_Plant_Sum_Insured_Ind': 2}
@@ -115,21 +117,25 @@ TARGET_LABELS = [0, 1]
 
 # List of the columns expected during serving (which is probably different to the header of the training data).
 SERVING_COLUMNS = ['Source_System', 'Product', 'Underwriting_Year', 'Transaction_Type',
-                   'Public_Liability_Limit', 'Employers_Liability_Limit', 'Tools_Sum_Insured', 'Professional_Indemnity_Limit',
+                   'Public_Liability_Limit', 'Employers_Liability_Limit', 'Tools_Sum_Insured',
+                   'Professional_Indemnity_Limit',
                    'Contract_Works_Sum_Insured', 'Hired_in_Plan_Sum_Insured', 'Own_Plant_Sum_Insured',
                    'Manual_EE', 'Clerical_EE', 'Subcontractor_EE',
                    'Match_Type', 'Trade_1_Category', 'Trade_1_Risk_Level', 'Trade_2_Risk_Level',
                    'Commission_Amount', 'Gross_PI_Premium', 'DurationofPolicy',
-                   'Tools_Sum_Insured_Ind', 'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind', 'Own_Plant_Sum_Insured_Ind',
+                   # 'Tools_Sum_Insured_Ind',
+                   'Contract_Works_Sum_Insured_Ind', 'Hired_in_Plan_Sum_Insured_Ind',
+                   'Own_Plant_Sum_Insured_Ind',
                    'Location', 'Risk_Postcode2', 'TotalEmployees']
 
 # List of the default values of all the columns of the serving data.
 # This helps decoding the data types of the columns.
 SERVING_DEFAULTS = [[''], [''], [0], [''],
-                   [0], [0], [0], [0],
-                   [0], [0], [0],
-                   [0], [0], [0],
-                   ['0'], [''], [0], [0],
-                   [0.0], [0.0], [0]
-                   [0], [0], [0], [0],
-                   [''], [''], [0]]
+                    [0], [0], [0], [0],
+                    [0], [0], [0],
+                    [0], [0], [0],
+                    ['0'], [''], [0], [0],
+                    [0.0], [0.0], [0]
+                    # [0],
+                    [0], [0], [0],
+                    [''], [''], [0]]
